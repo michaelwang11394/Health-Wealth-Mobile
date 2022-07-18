@@ -1,10 +1,14 @@
-import { StatusBar } from 'expo-status-bar';
-import { StyleSheet, Text, View } from 'react-native';
+import { StatusBar } from "expo-status-bar";
+import { StyleSheet, Text, View } from "react-native";
+import Constants from "expo-constants";
+import Home from "./container/home/Home";
 
 export default function App() {
   return (
     <View style={styles.container}>
-      <Text>Open up App.tsx to start working on your app!</Text>
+      <View style={styles.header}>
+        <Home />
+      </View>
       <StatusBar style="auto" />
     </View>
   );
@@ -13,8 +17,23 @@ export default function App() {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: '#fff',
-    alignItems: 'center',
-    justifyContent: 'center',
+    flexDirection: "row",
+    backgroundColor: "#1A434D",
+    alignItems: "center",
+  },
+
+  header: {
+    flex: 1,
+    marginTop: Constants.statusBarHeight,
+  },
+
+  chart: {
+    flex: 2,
+    backgroundColor: "black",
+  },
+
+  tasks: {
+    flex: 2,
+    backgroundColor: "white",
   },
 });
