@@ -1,12 +1,5 @@
 import React from "react";
-import {
-  StyleSheet,
-  Text,
-  TouchableOpacity,
-  View,
-  Image,
-  Dimensions,
-} from "react-native";
+import { StyleSheet, Text, View, Dimensions } from "react-native";
 import { LineChart } from "react-native-chart-kit";
 
 export default function GraphSection() {
@@ -24,13 +17,14 @@ export default function GraphSection() {
           ],
         }}
         width={Dimensions.get("window").width} // from react-native
-        height={220}
+        height={160}
         withShadow={false}
         withInnerLines={false}
         withOuterLines={false}
         withHorizontalLines={false}
+        withHorizontalLabels={true}
         yAxisLabel="$"
-        yAxisInterval={1} // optional, defaults to 1
+        yAxisInterval={2} // optional, defaults to 1
         onDataPointClick={(data) => console.log(data)}
         chartConfig={{
           backgroundColor: "white",
@@ -43,14 +37,15 @@ export default function GraphSection() {
             borderRadius: 16,
           },
           propsForDots: {
-            r: "6",
-            strokeWidth: "2",
+            r: "4",
+            strokeWidth: "1",
             stroke: "white",
           },
           useShadowColorFromDataset: true, // optional
+          strokeWidth: 2,
         }}
         style={{
-          marginVertical: 8,
+          marginVertical: 2,
           borderRadius: 16,
         }}
       />
@@ -62,15 +57,18 @@ const styles = StyleSheet.create({
   graphContainer: {
     flex: 1,
     flexDirection: "column",
-    margin: 8,
+    margin: "auto",
   },
   graphNumber: {
     fontSize: 32,
     fontWeight: "500",
+    marginLeft: 8,
   },
   graphText: {
     fontFamily: "Ariel",
     fontSize: 18,
     fontWeight: "500",
+    marginLeft: 8,
+    marginTop: 8,
   },
 });

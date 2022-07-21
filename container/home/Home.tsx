@@ -4,6 +4,7 @@ import React from "react";
 import { StyleSheet, View } from "react-native";
 import GraphSection from "./GraphSection";
 import HeaderSection from "./HeaderSection";
+import TaskSection from "./TaskSection";
 
 export default function Home() {
   return (
@@ -13,6 +14,9 @@ export default function Home() {
       </View>
       <View style={styles.graphSection}>
         <GraphSection />
+      </View>
+      <View style={styles.taskSection}>
+        <TaskSection />
       </View>
     </View>
   );
@@ -33,7 +37,13 @@ const styles = StyleSheet.create({
   },
 
   graphSection: {
-    flex: 3,
+    flex: 3.5,
+    flexDirection: "row",
+    backgroundColor: "white",
+  },
+
+  taskSection: {
+    flex: 4,
     flexDirection: "row",
     backgroundColor: "white",
   },

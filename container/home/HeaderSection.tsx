@@ -1,3 +1,4 @@
+import Constants from "expo-constants";
 import React from "react";
 import { StyleSheet, Text, TouchableOpacity, View, Image } from "react-native";
 import Icon from "react-native-vector-icons/FontAwesome";
@@ -36,7 +37,8 @@ const styles = StyleSheet.create({
     flex: 1,
     flexDirection: "row",
     backgroundColor: "#1A434D",
-    margin: 20,
+    marginTop: 20,
+    margin: "auto",
   },
 
   healthWealthText: {
@@ -55,6 +57,7 @@ const styles = StyleSheet.create({
     alignItems: "center",
     padding: 10,
     borderRadius: 100,
+    marginLeft: 8,
   },
 
   profileImage: {
@@ -65,5 +68,6 @@ const styles = StyleSheet.create({
 
   notificationIcon: {
     paddingTop: 8,
+    marginRight: 8,
   },
 });
